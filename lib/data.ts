@@ -239,7 +239,7 @@ export const projects: Project[] = [
     description:
       'An interactive micro-frontend that animates OAuth 2.0, MFA/OTP, and JWT token refresh flows step by step. Built from real-world auth system design experience. Includes a Tamper Mode to simulate expired tokens, invalid OTPs, and revoked sessions — showing exactly where and why flows fail.',
     category: 'Auth & Security',
-    status: 'in-progress',
+    status: 'live',
     featured: true,
     accentColor: '#7c3aed',
     icon: '🔐',
