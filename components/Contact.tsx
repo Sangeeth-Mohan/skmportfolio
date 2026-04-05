@@ -93,7 +93,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <p className="text-sm font-mono text-violet-400 mb-3 tracking-widest uppercase">04 — Contact</p>
+          <p className="text-sm font-mono text-violet-400 mb-3 tracking-widest uppercase">05 — Contact</p>
           <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
             Let&apos;s build something<br />
             <span className="gradient-text">remarkable.</span>

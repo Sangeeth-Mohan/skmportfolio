@@ -76,7 +76,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <p className="text-sm font-mono text-violet-400 mb-3 tracking-widest uppercase">03 — Skills</p>
+          <p className="text-sm font-mono text-violet-400 mb-3 tracking-widest uppercase">04 — Skills</p>
           <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
             The full-stack<br />
             <span className="gradient-text">arsenal.</span>

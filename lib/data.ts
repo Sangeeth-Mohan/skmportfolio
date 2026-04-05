@@ -204,3 +204,95 @@ export const domains = [
   { name: 'Energy', icon: '⚡' },
   { name: 'Tech', icon: '💻' },
 ]
+
+// ─────────────────────────────────────────────────
+// Projects — add new projects here, they auto-appear
+// in the Projects section with filtering + demo modal
+// ─────────────────────────────────────────────────
+
+export type ProjectStatus = 'live' | 'in-progress' | 'coming-soon'
+export type ProjectCategory = 'Auth & Security' | 'Performance' | 'Healthcare' | 'Architecture' | 'Finance'
+
+export type Project = {
+  id: string
+  title: string
+  subtitle: string
+  description: string
+  category: ProjectCategory
+  status: ProjectStatus
+  featured: boolean
+  accentColor: string
+  icon: string
+  tech: string[]
+  metrics?: string[]
+  demoUrl?: string        // MFE URL or external link
+  githubUrl?: string
+  embedType?: 'mfe' | 'iframe' | 'link'  // how to render the demo
+  inspiration: string     // "Based on my work at X" — humanises the project
+}
+
+export const projects: Project[] = [
+  {
+    id: 'auth-visualizer',
+    title: 'Auth Flow Visualizer',
+    subtitle: 'Interactive OAuth 2.0 · OTP · Token Refresh diagrams',
+    description:
+      'An interactive micro-frontend that animates OAuth 2.0, MFA/OTP, and JWT token refresh flows step by step. Built from real-world auth system design experience. Includes a Tamper Mode to simulate expired tokens, invalid OTPs, and revoked sessions — showing exactly where and why flows fail.',
+    category: 'Auth & Security',
+    status: 'in-progress',
+    featured: true,
+    accentColor: '#7c3aed',
+    icon: '🔐',
+    tech: ['React', 'Vite', 'Module Federation', 'Framer Motion', 'React Flow', 'Zustand', 'Node.js', 'Redis'],
+    metrics: ['OAuth 2.0', 'JWT', 'MFA/OTP', 'Token Refresh', 'Redis TTL'],
+    // demoUrl: 'https://auth-visualizer.amplifyapp.com', // ← update once deployed
+    // githubUrl: 'https://github.com/Sangeeth-Mohan/auth-visualizer', // ← create repo first
+    embedType: 'mfe',
+    inspiration: 'Based on building auth systems for 1M+ daily users at T-Mobile',
+  },
+  {
+    id: 'api-latency-dashboard',
+    title: 'API Latency Dashboard',
+    subtitle: 'Real-time BFF vs direct API latency comparison',
+    description:
+      'A live dashboard visualising the performance impact of Backend-for-Frontend (BFF) request consolidation vs. direct API calls. Shows real-time latency charts, cache hit rates, and request queue depth with Redis integration.',
+    category: 'Performance',
+    status: 'coming-soon',
+    featured: false,
+    accentColor: '#06b6d4',
+    icon: '⚡',
+    tech: ['React', 'Node.js', 'Redis', 'Recharts', 'WebSocket', 'Express'],
+    metrics: ['40% latency reduction', 'BFF pattern', 'Redis caching'],
+    inspiration: 'Based on reducing API latency by 40% at T-Mobile',
+  },
+  {
+    id: 'healthcare-scheduler',
+    title: 'Accessible Appointment Scheduler',
+    subtitle: 'WCAG 2.1 AA compliant patient scheduling',
+    description:
+      'A fully accessible patient appointment scheduling app built to WCAG 2.1 AA standards. Keyboard navigable, screen-reader optimised, with full ARIA labelling. Covers booking, rescheduling, cancellations, and reminders.',
+    category: 'Healthcare',
+    status: 'coming-soon',
+    featured: false,
+    accentColor: '#10b981',
+    icon: '🏥',
+    tech: ['React', 'Node.js', 'PostgreSQL', 'ARIA', 'Jest', 'Cypress'],
+    metrics: ['WCAG 2.1 AA', 'Keyboard nav', 'Screen reader'],
+    inspiration: 'Based on patient-facing systems built at Kaiser Permanente',
+  },
+  {
+    id: 'mfe-shell-demo',
+    title: 'Micro-Frontend Shell Demo',
+    subtitle: 'Module Federation — independent deploys, one UX',
+    description:
+      'A shell application that dynamically loads independent micro-frontends at runtime using Webpack Module Federation. Each MFE has its own repo, CI/CD pipeline, and deploy — but composes seamlessly into a unified experience.',
+    category: 'Architecture',
+    status: 'coming-soon',
+    featured: false,
+    accentColor: '#f59e0b',
+    icon: '🏗️',
+    tech: ['React', 'Module Federation', 'Webpack', 'Node.js', 'AWS Amplify'],
+    metrics: ['Independent deploys', 'Runtime composition', 'Shared design system'],
+    inspiration: 'Based on micro-frontend architecture delivered at T-Mobile',
+  },
+]
