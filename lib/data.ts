@@ -245,8 +245,8 @@ export const projects: Project[] = [
     icon: '🔐',
     tech: ['React', 'Vite', 'Module Federation', 'Framer Motion', 'React Flow', 'Zustand', 'Node.js', 'Redis'],
     metrics: ['OAuth 2.0', 'JWT', 'MFA/OTP', 'Token Refresh', 'Redis TTL'],
-    // demoUrl: 'https://auth-visualizer.amplifyapp.com', // ← update once deployed
-    // githubUrl: 'https://github.com/Sangeeth-Mohan/auth-visualizer', // ← create repo first
+    demoUrl: 'https://main.d3rh5s33trj737.amplifyapp.com/',
+    githubUrl: 'https://github.com/Sangeeth-Mohan/auth-flow-visualizer',
     embedType: 'mfe',
     inspiration: 'Based on building auth systems for 1M+ daily users at T-Mobile',
   },
